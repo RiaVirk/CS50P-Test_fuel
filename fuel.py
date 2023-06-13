@@ -16,22 +16,22 @@ def convert(num):
                 num = input("Fraction: ")
                 continue
 
-            else: 
+            else:
                 percentage = int(fraction * 100)
                 return percentage
-        
+
         except (ValueError, ZeroDivisionError):
-            continue
+            raise
 
 
 def gauge(percentage):
     if percentage >= 99:
         return "F"
-    
+
     elif percentage <= 1:
         return "E"
-    
-    else: 
+
+    else:
         return str(percentage) + "%"
 
 

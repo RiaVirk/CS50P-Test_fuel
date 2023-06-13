@@ -14,10 +14,10 @@ def test_convert():
     assert convert("99/100") == 99
 
     with pytest.raises(ValueError):
-        convert("ERROR ERROR")
-    
+        convert("cat/dog")
+
     with pytest.raises(ZeroDivisionError):
-        convert("Divided by Zero 1/0")
+        convert("1/0")
 
 
 def test_gauge():
